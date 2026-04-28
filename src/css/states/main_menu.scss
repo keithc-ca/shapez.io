@@ -171,45 +171,17 @@
         @include S(grid-gap, 20px);
 
         .mainNews {
-            background: linear-gradient(220deg, rgb(74, 93, 201), rgb(93, 255, 150));
-            &::before {
-                background: uiResource("shapez2.png") center center / 100% no-repeat;
-                content: "";
-                @include S(width, 100px);
-                @include S(height, 100px);
-                position: absolute;
-                top: 55%;
-                right: 8%;
-                pointer-events: none;
-                transform: translateY(-50%);
-                transition: transform 0.5s ease-in-out;
-            }
-
-            // .close {
-            //     position: absolute;
-            //     pointer-events: all;
-            //     background: uiResource("icons/main_menu_exit.png") center center / 50% no-repeat;
-            //     display: inline-flex;
-            //     @include S(width, 15px);
-            //     @include S(height, 15px);
-            //     @include S(top, 2px);
-            //     opacity: 0.3;
-            //     @include S(right, 2px);
-            //     z-index: 200;
-            //     transition: opacity 0.12s ease-in-out;
-            //     &:hover {
-            //         opacity: 0.7;
-            //     }
-            // }
-
-            &:hover::before {
-                transform: translate(0, -51%);
-            }
-
-            box-shadow: 0 D(9px) D(15px) rgba(#000, 0.2);
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(20, 10, 45, 0.85) 0%,
+                    rgba(20, 10, 45, 0.55) 45%,
+                    rgba(20, 10, 45, 0.15) 100%
+                ),
+                uiResource("shapez2_banner_bg.noinline.png") center / cover no-repeat;
             width: 100%;
             display: flex;
-            flex-direction: column;
+            align-items: center;
             @include S(height, 60px);
 
             pointer-events: all;
@@ -218,20 +190,87 @@
             position: relative;
             grid-row: 2 / 3;
             @include S(border-radius, $globalBorderRadius);
-            justify-content: center;
-            @include S(padding, 10px);
-            @include S(padding-right, 100px);
+            @include S(padding, 10px, 140px, 10px, 14px);
             box-sizing: border-box;
-            transition: opacity 0.12s ease-in-out;
+            transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
             cursor: pointer;
-            &:hover {
-                opacity: 0.85;
+
+            @include InlineAnimation(2.8s ease-in-out infinite) {
+                0%, 100% {
+                    box-shadow:
+                        0 D(9px) D(15px) rgba(#000, 0.3),
+                        inset 0 D(1px) 0 rgba(#fff, 0.15),
+                        0 0 D(0) rgba(125, 143, 255, 0);
+                }
+                50% {
+                    box-shadow:
+                        0 D(9px) D(15px) rgba(#000, 0.3),
+                        inset 0 D(1px) 0 rgba(#fff, 0.15),
+                        0 0 D(22px) rgba(125, 143, 255, 0.55);
+                }
+            }
+
+            &:hover > img {
+                animation: none !important;
+                transform: translateY(-52%) scale(1.05);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                @include S(width, 170px);
+                @include S(height, 140px);
+                top: 50%;
+                @include S(right, -12px);
+                transform: translateY(-50%);
+                background: radial-gradient(
+                    ellipse at center,
+                    rgba(220, 230, 255, 0.55) 0%,
+                    rgba(180, 200, 255, 0.18) 35%,
+                    transparent 70%
+                );
+                pointer-events: none;
+                z-index: 1;
+            }
+
+            > img {
+                @include S(width, 135px);
+                @include S(height, 110px);
+                object-fit: contain;
+                position: absolute;
+                top: 50%;
+                @include S(right, 6px);
+                pointer-events: none;
+                transform: translateY(-50%);
+                transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+                filter:
+                    drop-shadow(0 0 D(3px) rgba(255, 255, 255, 0.7))
+                    drop-shadow(0 D(2px) D(3px) rgba(#000, 0.6));
+                z-index: 2;
+
+                @include InlineAnimation(3.6s ease-in-out infinite) {
+                    0%, 100% {
+                        transform: translateY(-50%) rotate(0deg);
+                    }
+                    50% {
+                        transform: translate(0, calc(-50% - #{D(3px)})) rotate(-2deg);
+                    }
+                }
             }
 
             .text {
-                @include SuperSmallText;
-                @include S(width, 100px);
-                color: rgba(#000, 1);
+                @include PlainText;
+                @include S(font-size, 13px);
+                line-height: 1.15;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: #fff;
+                letter-spacing: 0.04em;
+                text-shadow: 0 D(1px) D(3px) rgba(#000, 0.6);
+                position: relative;
+                z-index: 2;
+                max-width: 55%;
+                word-wrap: break-word;
             }
         }
 

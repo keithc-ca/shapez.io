@@ -1,5 +1,12 @@
 export const CHANGELOG = [
     {
+        version: "1.5.7",
+        date: "28.04.2026",
+        entries: [
+            "🎉 shapez 2 is now out! <a href='https://tobspr.io/shapez-2?utm_medium=s1_steam' target='_blank'>Click here</a> to check it out. 🎉",
+        ],
+    },
+    {
         version: "1.5.6",
         date: "09.12.2022",
         entries: [

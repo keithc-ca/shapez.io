@@ -1,10 +1,9 @@
-## Shapez 2 now in Early Access!
+## shapez 2 out now!
 
-We are currently working on shapez 2, the successor to shapez!
-It is currently released in Early Access on Steam - be sure to check it out:
+Shapez 2 is now available on Steam, adding multi-layer factories, better performance, trains, fluids, and much more!
 
 <a href="https://store.steampowered.com/app/2162800/shapez_2/?utm_medium=github&amp;utm_source=s1_github" title="shapez 2 on Steam">
-    <img src="https://i.imgur.com/xsjVe2f.png" alt="shapez 2 Announcement">
+    <img src="https://i.imgur.com/QBOGSib.jpeg" alt="shapez 2 Announcement">
 </a>
 
 <br>
@@ -15,25 +14,20 @@ It is currently released in Early Access on Steam - be sure to check it out:
     <img src="https://i.imgur.com/ihW2bUE.png" alt="shapez Logo">
 </a>
 
-**Note:** This repository is not actively maintained. Please consider contributing to the [Community Edition](https://github.com/tobspr-games/shapez-community-edition) for ongoing development.
+## Contributing
 
-<hr>
+This repository is no longer actively maintained, we have moved over to [shapez 2](https://store.steampowered.com/app/2162800/shapez_2/?utm_medium=github&utm_source=s1_github) development.
+
+Please consider contributing to the [Community Edition](https://github.com/tobspr-games/shapez-community-edition) for ongoing development.
+
+## About
+
 This is the source code for shapez, an open source base building game inspired by Factorio.
 Your goal is to produce shapes by cutting, rotating, merging and painting parts of shapes.
 
 -   [Play on Steam](https://get.shapez.io/ghr)
 -   [Online Demo](https://shapez.io)
 -   [Official Discord](https://discord.com/invite/HN7EVzV) <- _Highly recommended to join!_
--   [Trello Board & Roadmap](https://trello.com/b/ISQncpJP/shapezio)
-
-## Reporting issues, suggestions, feedback, bugs
-
-1. Ask in `#bugs` / `#feedback` / `#questions` on the [Official Discord](https://discord.com/invite/HN7EVzV) if you are not entirely sure if it's a bug
-2. Check out the trello board: https://trello.com/b/ISQncpJP/shapezio
-3. See if it's already there - If so, vote for it, done. I will see it. (You have to be signed in on trello)
-4. If not, check if it's already reported here: https://github.com/tobspr-games/shapez.io/issues
-5. If not, file a new issue here: https://github.com/tobspr-games/shapez.io/issues/new
-6. I will then have a look (This can take days or weeks) and convert it to trello, and comment with the link. You can then vote there ;)
 
 ## Building
 
@@ -50,29 +44,10 @@ Your goal is to produce shapes by cutting, rotating, merging and painting parts 
 
 Mods can be found [here](https://shapez.mod.io). The documentation for creating mods can be found [here](mod_examples/), including a bunch of sample mods.
 
-## Build Online with one-click setup
-
-You can use [Gitpod](https://www.gitpod.io/) (an Online Open Source VS Code-like IDE which is free for Open Source) for working on issues and making PRs to this project. With a single click it will start a workspace and automatically:
-
--   clone the `shapez.io` repo.
--   install all of the dependencies.
--   start `gulp` in `gulp/` directory.
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/tobspr-games/shapez.io)
-
 ## Helping translate
 
-Please checkout the [Translations readme](translations/).
-
-## Contributing
-
-I will only accept pull requests which add a benefit to a large portion of the player base. If the feature is useful but only to a fraction of players, or is controversial, I recommend making a mod instead.
-
-If you want to add a new feature or in generally contribute I recommend to get in touch on Discord in advance, which largely increases the chance of the PR to get merged:
-
-<a href="https://discord.com/invite/HN7EVzV" target="_blank">
-<img src="https://i.imgur.com/SoawBhW.png" alt="discord logo" width="100">
-</a>
+Please checkout the [Translations readme](translations/README.md).
+However, currently we are not reviewing new translations.
 
 ### Code
 

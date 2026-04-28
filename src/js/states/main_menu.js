@@ -10,6 +10,7 @@ import {
     formatSecondsToTimeAgo,
     generateFileDownload,
     getLogoSprite,
+    getShapez2BannerSprite,
     makeButton,
     makeDiv,
     makeDivElement,
@@ -179,8 +180,10 @@ export class MainMenuState extends GameState {
                     ${
                         showShapez2
                             ? `<div class="mainNews shapez2">
-                        <div class="text">We are currently prototyping Shapez 2!</div>
-
+                        <div class="text">${T.mainMenu.shapez2Banner}</div>
+                        <img src="${cachebust(
+                            "res/ui/" + getShapez2BannerSprite(this.app.settings.getLanguage())
+                        )}" alt="shapez 2">
                     </div>`
                             : ""
                     }
@@ -334,8 +337,6 @@ export class MainMenuState extends GameState {
                     <div class="footerGrow">
                         ${showExternalLinks ? `<a class="changelog">${T.changelog.title}</a>` : ""}
 
-                        ${showExternalLinks ? `<a class="helpTranslate">${T.mainMenu.helpTranslate}</a>` : ""}
-
                     </div>
                         <div class="author"><a class="producerLink" href="https://tobspr.io" target="_blank" title="tobspr Games" rel="follow">
                         <img src="${cachebust("res/logo-tobspr-games.svg")}" alt="tobspr Games"
@@ -469,7 +470,6 @@ export class MainMenuState extends GameState {
             ".twitterLink": this.onTwitterLinkClicked,
             ".patreonLink": this.onPatreonLinkClicked,
             ".changelog": this.onChangelogClicked,
-            ".helpTranslate": this.onTranslationHelpLinkClicked,
             ".exitAppButton": this.onExitAppButtonClicked,
             ".steamLink": this.onSteamLinkClicked,
             ".steamLinkSocial": this.onSteamLinkClickedSocial,
@@ -905,12 +905,6 @@ export class MainMenuState extends GameState {
 
     onSettingsButtonClicked() {
         this.moveToState("SettingsState");
-    }
-
-    onTranslationHelpLinkClicked() {
-        this.app.platformWrapper.openExternalLink(
-            "https://github.com/tobspr-games/shapez.io/blob/master/translations"
-        );
     }
 
     onPlayButtonClicked() {

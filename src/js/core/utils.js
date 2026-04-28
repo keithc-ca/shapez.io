@@ -777,6 +777,18 @@ export function getLogoSprite() {
 }
 
 /**
+ * Returns the appropriate shapez 2 banner sprite path
+ * @param {string} language
+ */
+export function getShapez2BannerSprite(language) {
+    if (G_WEGAME_VERSION || G_CHINA_VERSION || language === "zh-CN") {
+        return "shapez2_zh-CN.png";
+    }
+
+    return "shapez2.png";
+}
+
+/**
  * Rejects a promise after X ms
  * @param {Promise} promise
  */
