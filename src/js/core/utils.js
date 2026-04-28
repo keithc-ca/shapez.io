@@ -782,10 +782,10 @@ export function getLogoSprite() {
  */
 export function getShapez2BannerSprite(language) {
     if (G_WEGAME_VERSION || G_CHINA_VERSION || language === "zh-CN") {
-        return "shapez2_zh-CN.png";
+        return "shapez2_zh-CN.noinline.png";
     }
 
-    return "shapez2.png";
+    return "shapez2.noinline.png";
 }
 
 /**
